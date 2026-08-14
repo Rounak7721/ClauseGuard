@@ -5,12 +5,12 @@
 
   **AI-powered legal contract review — explainable, clause by clause.**
 
-  ![Python](https://img.shields.io/badge/backend-Python%20%2F%20FastAPI-3776AB?logo=python&logoColor=white)
-  ![React](https://img.shields.io/badge/frontend-React%20%2F%20TypeScript-61DAFB?logo=react&logoColor=white)
-  ![Legal-BERT](https://img.shields.io/badge/ML-Legal--BERT%20on%20CUAD-D97748)
-  ![LangGraph](https://img.shields.io/badge/agent-LangGraph%20%2F%20Groq-863BFF)
-  ![Status](https://img.shields.io/badge/status-active%20development-2ea44f)
-  ![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
+  <a href="docs/ARCHITECTURE.md"><img src="https://img.shields.io/badge/backend-Python%20%2F%20FastAPI-3776AB?logo=python&logoColor=white" alt="Backend: Python / FastAPI — see docs/ARCHITECTURE.md" /></a>
+  <a href="docs/ARCHITECTURE.md"><img src="https://img.shields.io/badge/frontend-React%20%2F%20TypeScript-61DAFB?logo=react&logoColor=white" alt="Frontend: React / TypeScript — see docs/ARCHITECTURE.md" /></a>
+  <a href="docs/ML.md"><img src="https://img.shields.io/badge/ML-Legal--BERT%20on%20CUAD-D97748" alt="ML: Legal-BERT on CUAD — see docs/ML.md" /></a>
+  <a href="docs/AGENT.md"><img src="https://img.shields.io/badge/agent-LangGraph%20%2F%20Groq-863BFF" alt="Agent: LangGraph / Groq — see docs/AGENT.md" /></a>
+  <img src="https://img.shields.io/badge/status-active%20development-2ea44f" alt="Status: active development" />
+  <a href="docs/DEPLOYMENT.md"><img src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white" alt="CI/CD: GitHub Actions — see docs/DEPLOYMENT.md" /></a>
 </div>
 
 ## Demo
@@ -109,6 +109,8 @@ Full breakdown in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) and
 | Retrieval | ChromaDB |
 | Frontend | React, TypeScript, Vite |
 | PDF | PyMuPDF (backend parsing), jsPDF (client-side report export) |
+| Deployment | Docker, Docker Compose, GitHub Actions, Cloudflare Tunnel, Tailscale |
+| Observability | LangSmith (LLM tracing), Umami (frontend analytics), n8n (uptime monitoring and alerting) |
 
 ## Status
 
@@ -117,6 +119,30 @@ up from 0.63) after a root-cause fix to a training-label conflict — see
 [`docs/ML.md`](docs/ML.md) for that writeup. This repository is a public,
 documentation-focused mirror; application source lives in a private
 companion repository.
+
+## Future improvements
+
+These are not built yet. They are ideas under consideration for a later
+version.
+
+- **OCR support.** Currently ClauseGuard only reads PDFs with a real text
+  layer. OCR (Optical Character Recognition) would let it read scanned
+  or image-only contracts too.
+- **Multi-language support.** The classifier and prompts are English-only
+  today. Supporting other languages would need a multilingual classifier
+  and translated prompts.
+- **Clause comparison.** Compare the same clause type across two contract
+  versions — for example, redlining a revised NDA against the original.
+- **Whole-document summary.** A single executive summary of the entire
+  contract, generated on top of the existing per-clause reports.
+- **AI-assisted layout segmentation.** An optional mode using a
+  vision-capable LLM to help segment clauses in documents with unusual or
+  inconsistent layouts, where the current rule-based segmentation
+  struggles.
+- **More export formats.** Reports currently export as PDF only. DOCX
+  (Microsoft Word) export is a natural next format.
+- **Configurable risk rules.** Let an organization define its own risk
+  rules and thresholds, instead of using only the built-in rule table.
 
 ## License
 

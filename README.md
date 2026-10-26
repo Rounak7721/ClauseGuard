@@ -5,6 +5,9 @@
 
   **AI-powered legal contract review — explainable, clause by clause.**
 
+  <a href="https://clauseguard.rounak.co"><strong>🔗 Try it live → clauseguard.rounak.co</strong></a>
+
+  <a href="https://clauseguard.rounak.co"><img src="https://img.shields.io/badge/live-clauseguard.rounak.co-2ea44f?logo=googlechrome&logoColor=white" alt="Live demo: clauseguard.rounak.co" /></a>
   <a href="docs/ARCHITECTURE.md"><img src="https://img.shields.io/badge/backend-Python%20%2F%20FastAPI-3776AB?logo=python&logoColor=white" alt="Backend: Python / FastAPI — see docs/ARCHITECTURE.md" /></a>
   <a href="docs/ARCHITECTURE.md"><img src="https://img.shields.io/badge/frontend-React%20%2F%20TypeScript-61DAFB?logo=react&logoColor=white" alt="Frontend: React / TypeScript — see docs/ARCHITECTURE.md" /></a>
   <a href="docs/ML.md"><img src="https://img.shields.io/badge/ML-Legal--BERT%20on%20CUAD-D97748" alt="ML: Legal-BERT on CUAD — see docs/ML.md" /></a>
@@ -21,6 +24,8 @@
   </a>
   <br/>
   <a href="https://www.youtube.com/watch?v=t1wdO2IBGTY"><strong>▶ Watch the demo</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://clauseguard.rounak.co"><strong>🔗 Try the live app</strong></a>
 </p>
 
 ClauseGuard is an AI-powered legal contract review platform. It helps
